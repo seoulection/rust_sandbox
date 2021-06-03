@@ -17,3 +17,5 @@ Rust is cool in the sense that you can compile a `.rs` file, which will then cre
 `cargo run` - same as `cargo build` but it runs the executable as well
 
 `cargo check` - checks your code to see if it compiles, but doesn't produce an executable
+
+`cargo doc --open` - builds documentation provided by all your dependencies locally and opens it in the browser
