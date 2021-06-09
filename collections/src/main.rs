@@ -5,6 +5,10 @@ enum SpreadsheetCell {
     Text(String)
 }
 
+mod modules;
+
+pub use crate::modules::one;
+
 fn main() {
     vectors_example();
     string_example();
@@ -12,6 +16,13 @@ fn main() {
     hash_map_example();
     accessing_hash_map_example();
     updating_hash_map_example();
+
+    // exercises
+    // given a list of integers, use a vector and return the mean, median, and mode
+    let num_list = [3, 6, 1, 6, 2, 8, 9, 20, 17];
+    let mean = one::mean(&num_list);
+    println!("The mean is {:?}", mean);
+    println!("The num_list is {:?}", num_list);
 }
 
 fn vectors_example() {
@@ -172,6 +183,5 @@ fn updating_hash_map_example() {
     println!("{:?}", map);
 }
 
-// given a list of integers, use a vector and return the mean, median, and mode
 // convert strings to pig latin
 // add employee names to a department in a company
